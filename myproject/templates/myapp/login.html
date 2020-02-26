@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
+</head>
+<body>
+<form method="POST" class="post-form" action="/cong/">
+        {% csrf_token %}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h3>Enter Details</h3>
+    </div>
+  </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">USERNAME:</label><input type="text" placeholder="     enter username" />
+    <div class="col-sm-4">
+      {{ form.id }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">PASSWORD:</label><input type="text" placeholder="     enter password" />
+    <div class="col-sm-4">
+      {{ form.password }}
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">EMAIL:</label><input type="text" placeholder="     enter email" />
+    <div class="col-sm-4">
+      {{ form.email }}
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">CONTACT:</label><input type="text" placeholder="     enter contact" />
+    <div class="col-sm-4">
+      {{ form.contact }}
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
+    </div>
+  </div>
+    </div>
+</form>
+</body>
+</html>
